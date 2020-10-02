@@ -8,11 +8,11 @@ namespace DeviceApp.Tests
     public class InvokeMethodTests
     {
         [Theory]
-        [InlineData("inlamningsuppgift5","SetInterval","5","200")]
-        [InlineData("inlamningsuppgift5", "GetInterval", "5", "501")]
+        [InlineData("uppgift5","SetInterval","5","200")]
+        [InlineData("uppgift5", "GetInterval", "5", "501")]
         public void InvokeMethod(string targetDevice, string methodName, string payload, string expected)
         {
-            var service = new ServiceClientService("HostName=ec-win20-samuelw-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=DIJhSlhCzfs92bNMikOddSA5aqvJG06xdPcOLgyRHTA=");
+            var service = new ServiceClientService("HostName=ec-win-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=C0CnL4iJd6QqKZMn7lOG0GdRChJHUbWPUEDbKaFPMEw=");
             var response = service.InvokeMethodAsync(targetDevice, methodName, payload);
 
             Assert.Equal(expected, response.Result.Status.ToString());

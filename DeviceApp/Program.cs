@@ -14,7 +14,7 @@ namespace DeviceApp
 
         static void Main(string[] args)
         {
-            var device = new DeviceClientService("HostName=ec-win20-samuelw-iothub.azure-devices.net;DeviceId=inlamningsuppgift5;SharedAccessKey=hh5F4vDEHpSo1C4hw2ozjGMda61nVWpFgFhAvXx9ThA=");
+            var device = new DeviceClientService("HostName=ec-win-iothub.azure-devices.net;DeviceId=uppgift5;SharedAccessKey=rHTQYA3LzuNz5TKif48ZSN9qocyj1yRsnekEFZ+HJl0=");
 
             device.SendMessagAsync().GetAwaiter();            
             Console.ReadKey();            

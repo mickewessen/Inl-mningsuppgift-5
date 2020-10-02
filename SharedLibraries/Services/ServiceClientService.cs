@@ -11,7 +11,7 @@ namespace SharedLibraries.Services
 
         public ServiceClientService(string connectionstring)
         {
-            serviceClient = ServiceClient.CreateFromConnectionString("HostName=ec-win20-samuelw-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=DIJhSlhCzfs92bNMikOddSA5aqvJG06xdPcOLgyRHTA=");
+            serviceClient = ServiceClient.CreateFromConnectionString("HostName=ec-win-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=C0CnL4iJd6QqKZMn7lOG0GdRChJHUbWPUEDbKaFPMEw=");
         }
 
         public async Task<CloudToDeviceMethodResult> InvokeMethodAsync(string targetDevice, string methodName, string payload)
